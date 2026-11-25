@@ -1,6 +1,6 @@
 {
-  "name": "RutaExpress - Retiros y Entregas",
-  "short_name": "RutaExpress",
+  "name": "EntregaOk - Retiros y Entregas",
+  "short_name": "EntregaOk",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",

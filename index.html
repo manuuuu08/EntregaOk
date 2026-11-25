@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#0f172a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="RutaExpress" />
+  <meta name="apple-mobile-web-app-title" content="EntregaOk" />
   <link rel="manifest" href="./manifest.json" />
-  <title>RutaExpress v10 - Retiros, Entregas y Caja</title>
+  <title>EntregaOk - Retiros, Entregas y Caja</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -43,7 +43,7 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
             </span>
             <div>
-              <h1 class="text-lg font-extrabold text-white leading-tight">RutaExpress</h1>
+              <h1 class="text-lg font-extrabold text-white leading-tight">EntregaOk</h1>
               <p class="text-[11px] text-slate-400">Cuenta independiente • Offline + Nube</p>
             </div>
           </div>
@@ -74,7 +74,7 @@
         <form id="registerForm" onsubmit="handleRegisterSubmit(event)" class="space-y-3.5 text-sm">
           <div>
             <label class="block text-xs font-semibold text-slate-300 mb-1">Tu nombre o apodo</label>
-            <input type="text" id="reg-name" required placeholder="Ej: Yoa, Belén, Tía..." class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+            <input type="text" id="reg-name" required placeholder="Ej: Persona 1, Camila, Lucas..." class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
           </div>
 
           <div>
@@ -150,13 +150,13 @@
             <span class="bg-emerald-500 text-slate-950 p-1.5 rounded-lg">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
             </span>
-            RutaExpress
+            EntregaOk
             <span id="sync-badge" class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">● En vivo</span>
           </h1>
           <p class="text-xs text-slate-400">Retiros, entregas, tarifas y control de caja</p>
         </div>
         <button onclick="openTeamModal()" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-400 font-semibold px-3 py-1.5 rounded-full border border-slate-700 flex items-center gap-1 transition shrink-0">
-          <span>+ Chica</span>
+          <span>+ Persona</span>
         </button>
       </div>
 
@@ -169,7 +169,7 @@
         </div>
       </div>
 
-      <!-- Filtros dinámicos de Repartidoras -->
+      <!-- Filtros dinámicos de Persona / Repartidors -->
       <div id="driver-filters" class="flex gap-2 overflow-x-auto no-scrollbar pb-1"></div>
     </header>
 
@@ -325,9 +325,9 @@
           </div>
         </button>
 
-        <!-- Detalle por Repartidora en el período -->
+        <!-- Detalle por Persona / Repartidor en el período -->
         <div class="space-y-2">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Rendimiento por Repartidora (Período)</h3>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Rendimiento por Persona / Repartidor (Período)</h3>
           <div id="fin-drivers" class="space-y-2"></div>
         </div>
 
@@ -343,7 +343,7 @@
           </div>
 
           <div class="relative">
-            <input type="text" id="finSearchInput" oninput="renderFinance()" placeholder="Buscar movimiento, cliente, gasto o chica..." class="w-full bg-slate-900 text-xs text-white placeholder-slate-400 rounded-xl pl-8 pr-3 py-2 border border-slate-700 focus:outline-none focus:border-emerald-500">
+            <input type="text" id="finSearchInput" oninput="renderFinance()" placeholder="Buscar movimiento, cliente, gasto o persona..." class="w-full bg-slate-900 text-xs text-white placeholder-slate-400 rounded-xl pl-8 pr-3 py-2 border border-slate-700 focus:outline-none focus:border-emerald-500">
             <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
 
@@ -460,15 +460,15 @@
           <div class="grid grid-cols-1 gap-2 text-xs">
             <div>
               <label class="block text-slate-400 mb-1">Alias de transferencia</label>
-              <input type="text" id="cfg-alias" placeholder="Ej: Belcherrys7" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <input type="text" id="cfg-alias" placeholder="Ej: tu.alias.mp" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
             </div>
             <div>
               <label class="block text-slate-400 mb-1">Titular / Cuenta</label>
-              <input type="text" id="cfg-holder" placeholder="Ej: Johanna Belén Quiroga (Naranja X)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <input type="text" id="cfg-holder" placeholder="Ej: Nombre y Apellido (Banco / Billetera)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
             </div>
             <div>
               <label class="block text-slate-400 mb-1">Nota fija de punto de encuentro / suplentes (opcional)</label>
-              <input type="text" id="cfg-meetup-note" placeholder="Ej: Si no me encontrás a mí están mis compañeras o mi madrina Geor" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <input type="text" id="cfg-meetup-note" placeholder="Ej: Punto de referencia o contacto alternativo" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
             </div>
           </div>
         </div>
@@ -580,7 +580,7 @@
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label class="block text-xs text-slate-400 mb-1">Quien despacha</label>
-                <input type="text" id="p-sender" required placeholder="Ej: Tienda Sol" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+                <input type="text" id="p-sender" required placeholder="Ej: Tienda / Local" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
               </div>
               <div>
                 <label class="block text-xs text-slate-400 mb-1">WhatsApp <span class="text-slate-500">(opcional)</span></label>
@@ -625,7 +625,7 @@
 
             <div class="grid grid-cols-2 gap-2">
               <div>
-                <label class="block text-xs text-slate-400 mb-1">Repartidora que retira</label>
+                <label class="block text-xs text-slate-400 mb-1">Persona que retira</label>
                 <select id="p-driver" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"></select>
               </div>
               <div>
@@ -675,8 +675,8 @@
 
             <div class="grid grid-cols-2 gap-2">
               <div>
-                <label class="block text-xs text-slate-400 mb-1">Clienta (Recibe)</label>
-                <input type="text" id="d-client" required placeholder="Ej: Camila" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+                <label class="block text-xs text-slate-400 mb-1">Cliente (Recibe)</label>
+                <input type="text" id="d-client" required placeholder="Ej: Cliente 1" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
               </div>
               <div>
                 <label class="block text-xs text-slate-400 mb-1">WhatsApp <span class="text-slate-500">(opcional)</span></label>
@@ -726,7 +726,7 @@
 
             <div class="grid grid-cols-2 gap-2">
               <div>
-                <label class="block text-xs text-slate-400 mb-1">Repartidora</label>
+                <label class="block text-xs text-slate-400 mb-1">Persona / Repartidor</label>
                 <select id="d-driver" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"></select>
               </div>
               <div>
@@ -907,13 +907,13 @@
     <div id="teamModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
       <div class="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-3xl p-5 space-y-4">
         <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-          <h3 class="text-base font-bold text-white">Agregar Repartidora</h3>
+          <h3 class="text-base font-bold text-white">Agregar Persona / Repartidor</h3>
           <button onclick="closeTeamModal()" class="text-slate-400 hover:text-white text-xl">&times;</button>
         </div>
         <form onsubmit="addDriver(event)" class="space-y-3">
           <div>
             <label class="block text-xs text-slate-400 mb-1">Nombre</label>
-            <input type="text" id="newDriverName" required placeholder="Ej: Yoa, Yanina, Geor..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-white text-sm">
+            <input type="text" id="newDriverName" required placeholder="Ej: Persona 1, Persona 2..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-white text-sm">
           </div>
           <div>
             <label class="block text-xs text-slate-400 mb-1">Color identificador</label>
@@ -994,25 +994,25 @@
         .replace(/[\u0300-\u036f]/g, '');
     }
 
-    const DEFAULT_DELIVERY_TEMPLATE = `ℎ𝑜𝑙𝑖𝑠 {cliente}, 𝑏𝑢𝑒𝑛 {dia} 𝑟𝑒𝑖𝑛𝑎 💘
-𝑝𝑎𝑠𝑜 𝑎 𝑑𝑒𝑗𝑎𝑟𝑡𝑒 𝑡𝑢𝑠 𝑡𝑜𝑡𝑎𝑙𝑒𝑠 𝑦 𝑑𝑎𝑡𝑜𝑠 🫣
+    const DEFAULT_DELIVERY_TEMPLATE = `Hola {cliente}, buen {dia} 👋
+Te paso el resumen y los datos de tu envío:
 
-| 𝗖𝗼𝗻𝗳𝗶𝗿𝗺𝗮𝗿 𝗮𝘀𝗶𝘀𝘁𝗲𝗻𝗰𝗶𝗮 {dia} ({fecha}) |
+| Confirmar asistencia {dia} ({fecha}) |
 • {destino} {horario}{notas_coma}
 {nota_encuentro}
 
 🛍️ {paquetes} • {origen_o_destino}
-𝑠𝑒𝑟𝑖́𝑎 : {detalle_precios}
+• Detalle: {detalle_precios}
 {recargo_linea}
-💸 𝑡𝑢 𝑡𝑜𝑡𝑎𝑙 : {total} .
-💱 𝑚𝑒𝑑𝑖𝑜 𝑑𝑒 𝑝𝑎𝑔𝑜 : {metodo} .
+💸 Total: {total}
+💳 Medio de pago: {metodo}
 
-💕 𝑇𝑟𝑎𝑛𝑠𝑓𝑒𝑟𝑒𝑛𝑐𝑖𝑎 :
-𝖺𝗅𝗂𝖺𝗌 : {alias}
-𝖺𝗅 𝗇𝗈𝗆𝖻𝗋𝖾 : {titular}
-• mandar comprobante porfa .
+📲 Datos para transferencia:
+Alias: {alias}
+Titular: {titular}
+• Por favor enviar comprobante una vez realizada.
 
-• ✨ 𝑒𝑡𝑒𝑟𝑛𝑎𝑚𝑒𝑛𝑡𝑒 𝑎𝑔𝑟𝑎𝑑𝑒𝑐𝑖𝑑𝑎 𝑐𝑜𝑛 𝑣𝑜𝑠 🫵🏼🤍!`;
+¡Muchas gracias! 🙌`;
 
     const DEFAULT_PENDING_TEMPLATE = `Hola {cliente}, ¿cómo estás? 😊
 Te recuerdo que quedó pendiente el pago de tu envío ({fecha} - {destino}):
@@ -1033,14 +1033,14 @@ Titular: {titular}
 ¡Avísame cuando estés!`;
 
     const defaultDrivers = [
-      { id: 'd1', name: 'Hermana Yoa', color: 'emerald' },
-      { id: 'd2', name: 'Tía', color: 'sky' }
+      { id: 'd1', name: 'Persona 1', color: 'emerald' },
+      { id: 'd2', name: 'Persona 2', color: 'sky' }
     ];
 
     const defaultWaSettings = {
-      alias: 'Belcherrys7',
-      holder: 'Johanna Belén Quiroga { naranja x )',
-      meetupNote: 'Si no me encontrás a mí están mis compañeras o mi madrina Geor .',
+      alias: '',
+      holder: '',
+      meetupNote: '',
       surchargeDefault: 1500,
       deliveryTemplate: DEFAULT_DELIVERY_TEMPLATE,
       pendingTemplate: DEFAULT_PENDING_TEMPLATE,
@@ -1726,7 +1726,7 @@ Titular: {titular}
 
     function renderDriverFilters() {
       const container = document.getElementById('driver-filters');
-      let html = `<button onclick="setDriverFilter('all')" class="px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition ${selectedDriver === 'all' ? 'bg-white text-slate-950 border-white' : 'bg-slate-800 text-slate-300 border-slate-700'}">Todas</button>`;
+      let html = `<button onclick="setDriverFilter('all')" class="px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition ${selectedDriver === 'all' ? 'bg-white text-slate-950 border-white' : 'bg-slate-800 text-slate-300 border-slate-700'}">Todos</button>`;
       drivers.forEach(d => {
         const active = selectedDriver === d.id;
         html += `<button onclick="setDriverFilter('${d.id}')" class="px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition ${active ? 'bg-emerald-500 text-slate-950 border-emerald-500' : 'bg-slate-800 text-slate-300 border-slate-700'}">${d.name}</button>`;
@@ -2616,7 +2616,7 @@ Titular: {titular}
 
     function renameDriver(id) {
       const driver = drivers.find(d => d.id === id);
-      const newName = prompt('Nuevo nombre para la repartidora:', driver.name);
+      const newName = prompt('Nuevo nombre para la persona:', driver.name);
       if (newName && newName.trim()) {
         driver.name = newName.trim();
         saveState();
@@ -2627,7 +2627,7 @@ Titular: {titular}
     }
 
     function removeDriver(id) {
-      if (confirm('¿Quitar esta repartidora de la lista?')) {
+      if (confirm('¿Quitar esta persona de la lista?')) {
         drivers = drivers.filter(d => d.id !== id);
         if (selectedDriver === id) selectedDriver = 'all';
         saveState();
@@ -3039,7 +3039,7 @@ Titular: {titular}
     }
 
     function copyWhatsAppReport() {
-      let text = '*📦 RESUMEN DEL DÍA - RUTAEXPRESS*\n\n';
+      let text = '*📦 RESUMEN DEL DÍA - ENTREGAOK*\n\n';
       text += '*📥 RETIROS:*\n';
       pickups.forEach((p, i) => {
         const d = drivers.find(x => x.id === p.driverId)?.name || 'Sin asignar';

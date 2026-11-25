@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rutaexpress-v10-complete';
+const CACHE_NAME = 'entregaok-v10-complete';
 const ASSETS = [
   './',
   './index.html',
