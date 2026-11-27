@@ -1,4 +1,4 @@
-const CACHE_NAME = 'entregaok-v10-complete';
+const CACHE_NAME = 'entregaok-v13-sol-noche';
 const ASSETS = [
   './',
   './index.html',
